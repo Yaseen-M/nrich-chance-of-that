@@ -4,9 +4,9 @@ import random
 from scipy.stats.stats import pearsonr
 
 
-def generate_list(length):
+def generate_list(list_length):
     new_list = []
-    for i in range(length):
+    for i in range(list_length):
         new_number = random.randint(1, 5)
         new_list.append(new_number)
     return new_list

@@ -23,12 +23,14 @@ def generate_zero_r():
             return list_x, list_y
 
 
+def print_list(letter, output_list):
+    print('List {}: {}'.format(letter, output_list))
+
+
 def main():
-    lists = generate_zero_r()
-    list_x = lists[0]
-    list_y = lists[1]
-    print("List x: " + str(list_x))
-    print("List y: " + str(list_y))
+    list_x, list_y = generate_zero_r()
+    print_list('x', list_x)
+    print_list('y', list_y)
 
 
 main()

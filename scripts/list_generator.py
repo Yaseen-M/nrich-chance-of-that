@@ -4,33 +4,23 @@ import random
 from scipy.stats.stats import pearsonr
 
 
-def generate_list(list_length):
-    return [random.randint(1, 5) for i in range(list_length)]
+class ListGenerator:
+    @classmethod
+    def generate_list(cls, list_length):
+        return [random.randint(1, 5) for i in range(list_length)]
 
+    @classmethod
+    def calc_r(cls, list_x, list_y):
+        r = pearsonr(list_x, list_y)[0]
+        return r
 
-def calc_r(list_x, list_y):
-    r = pearsonr(list_x, list_y)[0]
-    return r
+    @classmethod
+    def generate_zero_r(cls):
+        generated_zero = False
+        while not generated_zero:
+            list_x = cls.generate_list(12)
+            list_y = cls.generate_list(12)
+            if cls.calc_r(list_x, list_y) == 0:
+                generated_zero = True
+                return list_x, list_y
 
-
-def generate_zero_r():
-    generated_zero = False
-    while not generated_zero:
-        list_x = generate_list(12)
-        list_y = generate_list(12)
-        if calc_r(list_x, list_y) == 0:
-            generated_zero = True
-            return list_x, list_y
-
-
-def print_list(letter, output_list):
-    print('List {}: {}'.format(letter, output_list))
-
-
-def main():
-    list_x, list_y = generate_zero_r()
-    print_list('x', list_x)
-    print_list('y', list_y)
-
-
-main()

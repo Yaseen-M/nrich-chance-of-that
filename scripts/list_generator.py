@@ -23,4 +23,3 @@ class ListGenerator:
             if cls.calc_r(list_x, list_y) == 0:
                 generated_zero = True
                 return list_x, list_y
-

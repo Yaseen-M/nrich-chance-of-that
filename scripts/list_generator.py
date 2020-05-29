@@ -8,7 +8,7 @@ def generate_list(list_length):
     return [random.randint(1, 5) for i in range(list_length)]
 
 
-def get_pearsonr(list_x, list_y):
+def calc_r(list_x, list_y):
     r = pearsonr(list_x, list_y)[0]
     return r
 
@@ -18,7 +18,7 @@ def generate_zero_r():
     while not generated_zero:
         list_x = generate_list(12)
         list_y = generate_list(12)
-        if get_pearsonr(list_x, list_y) == 0:
+        if calc_r(list_x, list_y) == 0:
             generated_zero = True
             return list_x, list_y
 

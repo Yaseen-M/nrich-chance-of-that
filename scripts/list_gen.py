@@ -16,10 +16,10 @@ class ListGen:
 
     @classmethod
     def gen_zero_r(cls):
-        generated_zero = False
-        while not generated_zero:
+        tries = 0
+        while True:
             list_x = cls.gen_list(12)
             list_y = cls.gen_list(12)
+            tries += 1
             if cls.calc_r(list_x, list_y) == 0:
-                generated_zero = True
-                return list_x, list_y
+                return list_x, list_y, tries

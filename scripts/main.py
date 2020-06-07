@@ -16,17 +16,21 @@ class Menu():
             print('3) Close program')
 
             try:
-                option = int(input('\nOption (1-3)): '))
+                option = int(input('\nOption (1-3): '))
             except ValueError:
                 print('Please enter a valid number.')
                 continue
 
             if option == 1:
-                print(ListGen.gen_zero_r())
+                x, y, tries = ListGen.gen_zero_r()
+                print('List x: {}'.format(x))
+                print('List y: {}'.format(y))
+                print('Number of tries: {}'.format(tries))
             elif option == 2:
                 print('In progress!')
             elif option == 3:
                 exit_program = True
 
 
-menu = Menu()
+if __name__ == "__main__":
+    menu = Menu()

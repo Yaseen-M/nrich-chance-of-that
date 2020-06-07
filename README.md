@@ -12,6 +12,12 @@ This project is an investigation into the NRICH problem [Chance of That](https:/
 
 ## Installation
 
+The `requirements.txt` file lists all the Python libraries that are required. They can be installed using:
+
+```
+pip install -r requirements.txt
+```
+
 ## Usage
 
 ## Authors and acknowledgement

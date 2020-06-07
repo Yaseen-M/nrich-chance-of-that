@@ -12,8 +12,7 @@ class Menu():
         print('Main menu')
         print('-------------')
         print('1) Generate two lists with zero correlation')
-        print('2) Generate probability of zero correlation')
-        print('3) Close program')
+        print('2) Close program')
 
         try:
             option = int(input('\nOption (1 or 2): '))

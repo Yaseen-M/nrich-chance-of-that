@@ -4,11 +4,11 @@
 
 This project is an investigation into the NRICH problem [Chance of That](https://nrich.maths.org/7287). NRICH set the problem as follows:
 
-_I was looking at two seemingly random lists of 12 whole numbers chosen from 1 to 5. The sample correlation was exactly zero._
+> I was looking at two seemingly random lists of 12 whole numbers chosen from 1 to 5. The sample correlation was exactly zero.
 
-_Convince yourself that such a list of numbers is possible. Can you get a feel for the properties of such lists?_
+> Convince yourself that such a list of numbers is possible. Can you get a feel for the properties of such lists?
 
-_Explore the properties and frequencies of such lists of numbers, perhaps varying the two numbers involved._
+> Explore the properties and frequencies of such lists of numbers, perhaps varying the two numbers involved.
 
 ## Installation
 

@@ -4,9 +4,9 @@ import random
 from scipy.stats.stats import pearsonr
 
 
-class ListGenerator:
+class ListGen:
     @classmethod
-    def generate_list(cls, list_length):
+    def gen_list(cls, list_length):
         return [random.randint(1, 5) for i in range(list_length)]
 
     @classmethod
@@ -15,11 +15,11 @@ class ListGenerator:
         return r
 
     @classmethod
-    def generate_zero_r(cls):
+    def gen_zero_r(cls):
         generated_zero = False
         while not generated_zero:
-            list_x = cls.generate_list(12)
-            list_y = cls.generate_list(12)
+            list_x = cls.gen_list(12)
+            list_y = cls.gen_list(12)
             if cls.calc_r(list_x, list_y) == 0:
                 generated_zero = True
                 return list_x, list_y

@@ -1,0 +1,2 @@
+class ProbabilityGen:
+    pass

@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is an investigation into the NRICH problem [Chance of That](https://nrich.maths.org/7287). NRICH set the problem as follows:
+This project is an investigation into the NRICH problem [Chance of That](https://nrich.maths.org/7287). NRICH sets the problem as follows:
 
 > I was looking at two seemingly random lists of 12 whole numbers chosen from 1 to 5. The sample correlation was exactly zero.
 

@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-## Authors and acknowledgement
+## Credits
 
 - Thanks to NRICH for providing the problem and accepting my solution.
 

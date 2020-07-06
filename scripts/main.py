@@ -27,8 +27,8 @@ class Menu():
             print('You entered an invalid option.')
 
     def print_results(self, x, y, tries):
-        print('\nList x: {}'.format(x))
-        print('List y: {}'.format(y))
+        print('\nList x: {}'.format(', '.join(str(num) for num in x)))
+        print('List y: {}'.format(', '.join(str(num) for num in y)))
         print('Number of tries: {}'.format(tries))
 
 

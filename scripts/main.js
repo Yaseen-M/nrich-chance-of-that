@@ -1,3 +1,8 @@
+// Get elements from the DOM
+const generateButton = document.querySelector('#generate-btn');
+const list1 = document.querySelector('#list-1');
+const list2 = document.querySelector('#list-2');
+
 // Calculate Pearson's r
 function calculateCorrelation(x, y) {
   return jStat.corrcoeff(x, y);
@@ -39,31 +44,42 @@ function generateZeroR() {
   return lists;
 }
 
-// Get elements from the DOM
-const generateButton = document.querySelector('#generate-btn');
-const list1 = document.querySelector('#list-1');
-const list2 = document.querySelector('#list-2');
+function getZ(x, y) {
+  return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+}
 
-// Create lists when generate button is clicked
-generateButton.addEventListener('click', () => {
-  const { x, y } = generateZeroR();
-  list1.innerHTML = `x: ${x}`;
-  list2.innerHTML = `y: ${y}`;
-
+function plotGraph(x, y, z) {
   const trace1 = {
     x,
     y,
+    z,
     mode: 'markers',
+    type: 'scatter3d',
   };
 
   const data = [trace1];
 
   const layout = {
-    title: 'Marker Size',
-    showlegend: false,
-    height: 600,
-    width: 600,
+    title: '3D Scatter Plot',
+    margin: {
+      l: 0,
+      r: 0,
+      b: 0,
+      t: 0,
+    },
   };
 
-  Plotly.newPlot('chart', data, layout, { staticPlot: true });
+  Plotly.newPlot('chart', data, layout);
+}
+
+// Create lists when generate button is clicked
+generateButton.addEventListener('click', () => {
+  const { x, y } = generateZeroR();
+
+  list1.innerHTML = `x: ${x.join(', ')}`;
+  list2.innerHTML = `y: ${y.join(', ')}`;
+
+  const z = getZ(x, y);
+
+  plotGraph(x, y, z);
 });

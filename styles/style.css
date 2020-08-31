@@ -35,6 +35,8 @@ button {
   background-color: #fff;
   transition: 0.2s;
   font-weight: 500;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 button:hover {
@@ -79,10 +81,6 @@ main {
   padding: 20px;
 }
 
-#sidebar button {
-  margin-bottom: 15px;
-}
-
 #sidebar ul {
   background-color: var(--blue);
   padding: 5px 10px;
@@ -93,8 +91,8 @@ main {
 }
 
 #chart-container {
-  padding: 30px;
-  height: 500px;
+  /* padding: 10px; */
+  min-height: 500px;
   overflow-y: auto;
   background-color: #fff;
 }

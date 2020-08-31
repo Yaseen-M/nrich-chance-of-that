@@ -10,14 +10,6 @@ This project is an investigation into the NRICH problem [Chance of That](https:/
 
 > Explore the properties and frequencies of such lists of numbers, perhaps varying the two numbers involved.
 
-## Installation
-
-The `requirements.txt` file lists all of the required Python libraries. They can be installed using:
-
-```
-pip install -r requirements.txt
-```
-
 ## Usage
 
 ## Credits

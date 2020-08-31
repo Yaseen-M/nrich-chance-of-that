@@ -44,35 +44,37 @@ function generateZeroR() {
   return lists;
 }
 
-function getZ(x, y) {
-  return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-}
-
-function plotGraph(x, y, z) {
+// Plot graph of y vs x
+function plotGraph(x, y) {
   const trace1 = {
     x,
     y,
-    z,
     mode: 'markers',
     marker: {
-      size: 8,
+      size: 20,
+      color: '#3388dc',
+      line: {
+        color: '#00152a',
+        width: 2,
+      },
     },
-    type: 'scatter3d',
+    type: 'scatter',
   };
 
   const data = [trace1];
 
   const layout = {
-    title: '3D Scatter Plot',
     margin: {
-      l: 0,
-      r: 0,
-      b: 0,
-      t: 0,
+      l: 50,
+      r: 20,
+      b: 20,
+      t: 20,
     },
   };
 
-  Plotly.newPlot('chart', data, layout);
+  const config = { responsive: true, staticPlot: true };
+
+  Plotly.newPlot('chart', data, layout, config);
 }
 
 // Create lists when generate button is clicked
@@ -82,7 +84,5 @@ generateButton.addEventListener('click', () => {
   list1.innerHTML = `x: ${x.join(', ')}`;
   list2.innerHTML = `y: ${y.join(', ')}`;
 
-  const z = getZ(x, y);
-
-  plotGraph(x, y, z);
+  plotGraph(x, y);
 });

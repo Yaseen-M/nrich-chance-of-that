@@ -10,11 +10,11 @@ This project is an investigation into the NRICH problem [Chance of That](https:/
 
 > Explore the properties and frequencies of such lists of numbers, perhaps varying the two numbers involved.
 
-## Usage
-
 ## Credits
 
 - Thanks to NRICH for providing the problem and accepting my solution.
+- [jStat](https://github.com/jstat/jstat) - JavaScript statistical functions.
+- [Ploty](https://plotly.com/javascript/) - JavaScript graphing library.
 
 ## License
 

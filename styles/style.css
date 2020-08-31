@@ -4,7 +4,6 @@
   --blue: #006ad3;
   --light-blue: #3388dc;
   --dark-blue: #00152a;
-  --green: #00ba5c;
 }
 
 * {
@@ -91,7 +90,6 @@ main {
 }
 
 #chart-container {
-  /* padding: 10px; */
   min-height: 500px;
   overflow-y: auto;
   background-color: #fff;

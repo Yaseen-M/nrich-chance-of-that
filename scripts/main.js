@@ -54,6 +54,9 @@ function plotGraph(x, y, z) {
     y,
     z,
     mode: 'markers',
+    marker: {
+      size: 8,
+    },
     type: 'scatter3d',
   };
 

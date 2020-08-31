@@ -2,6 +2,7 @@
 const generateButton = document.querySelector('#generate-btn');
 const list1 = document.querySelector('#list-1');
 const list2 = document.querySelector('#list-2');
+const triesElement = document.querySelector('#tries');
 
 // Calculate Pearson's r
 function calculateCorrelation(x, y) {
@@ -25,23 +26,28 @@ function generateList() {
 function generateZeroR() {
   validLists = false;
 
-  lists = {
-    x: [],
-    y: [],
-  };
+  // Create lists
+  let x;
+  let y;
+
+  // Store number of tries until successful lists are generated
+  let tries = 0;
 
   while (!validLists) {
     // Generate two random lists
-    lists.x = generateList();
-    lists.y = generateList();
+    x = generateList();
+    y = generateList();
+
+    // Increment tries
+    tries++;
 
     // Check if they have no correlation
-    if (calculateCorrelation(lists.x, lists.y) === 0) {
+    if (calculateCorrelation(x, y) === 0) {
       validLists = true;
     }
   }
 
-  return lists;
+  return { x, y, tries };
 }
 
 // Plot graph of y vs x
@@ -77,12 +83,17 @@ function plotGraph(x, y) {
   Plotly.newPlot('chart', data, layout, config);
 }
 
-// Create lists when generate button is clicked
+// Add event listener to the generate button
 generateButton.addEventListener('click', () => {
-  const { x, y } = generateZeroR();
+  // Generate lists
+  const { x, y, tries } = generateZeroR();
 
+  // Output lists to the DOM
   list1.innerHTML = `x: ${x.join(', ')}`;
   list2.innerHTML = `y: ${y.join(', ')}`;
+
+  // Output number of tries to the DOM
+  triesElement.innerHTML = `Tries: ${tries}`;
 
   plotGraph(x, y);
 });

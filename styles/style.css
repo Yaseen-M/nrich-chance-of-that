@@ -85,6 +85,17 @@ main {
   padding: 20px;
 }
 
+#sliders {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+}
+
+label {
+  color: var(--blue);
+  display: block;
+}
+
 #sidebar ul {
   background-color: var(--blue);
   padding: 5px 10px;
